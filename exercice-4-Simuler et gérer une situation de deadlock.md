@@ -94,7 +94,8 @@ Dans cette partie, vous allez volontairement créer une situation de deadlock.
 
     -- Simule un délai
     SELECT pg_sleep(5); -- Adaptez cette ligne à votre SGBD
-    ```
+    
+```
 
 2.  **Session 2 (Transaction 2) :** Immédiatement après, dans une seconde session, exécutez le bloc de code suivant jusqu'à la ligne `SELECT pg_sleep(5);` incluse.
     
@@ -110,7 +111,7 @@ Dans cette partie, vous allez volontairement créer une situation de deadlock.
 
     -- Simule un délai
     SELECT pg_sleep(5); -- Adaptez cette ligne à votre SGBD
-    ```
+```
 
 3.  **Session 1 (Transaction 1) :** Revenez à la première session et exécutez la suite de T1.
     
@@ -122,7 +123,7 @@ Dans cette partie, vous allez volontairement créer une situation de deadlock.
     WHERE id_compte = 2;
 
     COMMIT;
-    ```
+```
 
 4.  **Session 2 (Transaction 2) :** Revenez à la seconde session et exécutez la suite de T2.
     
@@ -134,7 +135,7 @@ Dans cette partie, vous allez volontairement créer une situation de deadlock.
     WHERE id_compte = 1;
 
     COMMIT;
-    ```
+```
 
 Vous devez observer :
 
